@@ -1,0 +1,13 @@
+body {
+    text-align: center; /* Center align elements */
+    padding-top: 50px; /* Add some space at the top */
+}
+#overlayImage {
+    max-width: 80%; /* Limit image width to 80% of its parent */
+    height: auto; /* Keep image aspect ratio */
+    margin-bottom: 30px; /* Space between image and form */
+}
+.container {
+    width: 80%;
+    margin: auto; /* Center align the container */
+}

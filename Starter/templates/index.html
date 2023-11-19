@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flask App</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<div>
+    <img id="inputImage" style="max-width: 100%; height: auto;"/>
+</div>
+<div>
+    <input type="file" id="imageInput">
+</div>
+    
+    
+<script>
+    document.getElementById('imageInput').addEventListener('change', function(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+            var output = document.getElementById('inputImage');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    });
+</script>
+
+<style>
+    body {
+        text-align: center; /* Center align elements */
+        padding-top: 50px; /* Add some space at the top */
+        background-color: #121212; /* Dark background for dark mode */
+        color: #ffffff; /* Light text color for contrast */
+    }
+    
+    #overlayImage {
+        max-width: 80%; /* Limit image width to 80% of its parent */
+        height: auto; /* Keep image aspect ratio */
+        margin-bottom: 30px; /* Space between image and form */
+    }
+    
+    .container {
+        width: 80%;
+        margin: auto; /* Center align the container */
+        background-color: #1e1e1e; /* Slightly lighter background for the container */
+        padding: 20px; /* Padding inside the container */
+        border-radius: 10px; /* Rounded corners for the container */
+    }
+</style>
+        
+    
+</body>
+</html>
